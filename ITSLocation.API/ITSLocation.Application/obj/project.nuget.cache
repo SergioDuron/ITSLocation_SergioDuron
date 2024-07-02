@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "nOcj4KjqVAXAUxkMkm7Ich4XXzh4GFdVkzPIzt+HWCzVVeeil0IfqKmgVnPXfIWmhSiIJike21qqUUWH5ZBUwA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Desarrollo\\source\\repos\\ITSLocation.API\\ITSLocation.Application\\ITSLocation.Application.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Desarrollo\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.1\\microsoft.extensions.dependencyinjection.abstractions.8.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

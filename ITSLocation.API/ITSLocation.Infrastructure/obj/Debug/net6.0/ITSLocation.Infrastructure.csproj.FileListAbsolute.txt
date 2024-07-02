@@ -1,0 +1,15 @@
+C:\Users\Desarrollo\source\repos\ITSLocation.API\ITSLocation.Infrastructure\bin\Debug\net6.0\ITSLocation.Infrastructure.deps.json
+C:\Users\Desarrollo\source\repos\ITSLocation.API\ITSLocation.Infrastructure\bin\Debug\net6.0\ITSLocation.Infrastructure.dll
+C:\Users\Desarrollo\source\repos\ITSLocation.API\ITSLocation.Infrastructure\bin\Debug\net6.0\ITSLocation.Infrastructure.pdb
+C:\Users\Desarrollo\source\repos\ITSLocation.API\ITSLocation.Infrastructure\bin\Debug\net6.0\ITSLocation.Domain.dll
+C:\Users\Desarrollo\source\repos\ITSLocation.API\ITSLocation.Infrastructure\bin\Debug\net6.0\ITSLocation.Domain.pdb
+C:\Users\Desarrollo\source\repos\ITSLocation.API\ITSLocation.Infrastructure\obj\Debug\net6.0\ITSLocation.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\Desarrollo\source\repos\ITSLocation.API\ITSLocation.Infrastructure\obj\Debug\net6.0\ITSLocation.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Desarrollo\source\repos\ITSLocation.API\ITSLocation.Infrastructure\obj\Debug\net6.0\ITSLocation.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\Desarrollo\source\repos\ITSLocation.API\ITSLocation.Infrastructure\obj\Debug\net6.0\ITSLocation.Infrastructure.AssemblyInfo.cs
+C:\Users\Desarrollo\source\repos\ITSLocation.API\ITSLocation.Infrastructure\obj\Debug\net6.0\ITSLocation.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Desarrollo\source\repos\ITSLocation.API\ITSLocation.Infrastructure\obj\Debug\net6.0\ITSLocation.Infrastructure.csproj.CopyComplete
+C:\Users\Desarrollo\source\repos\ITSLocation.API\ITSLocation.Infrastructure\obj\Debug\net6.0\ITSLocation.Infrastructure.dll
+C:\Users\Desarrollo\source\repos\ITSLocation.API\ITSLocation.Infrastructure\obj\Debug\net6.0\refint\ITSLocation.Infrastructure.dll
+C:\Users\Desarrollo\source\repos\ITSLocation.API\ITSLocation.Infrastructure\obj\Debug\net6.0\ITSLocation.Infrastructure.pdb
+C:\Users\Desarrollo\source\repos\ITSLocation.API\ITSLocation.Infrastructure\obj\Debug\net6.0\ref\ITSLocation.Infrastructure.dll
