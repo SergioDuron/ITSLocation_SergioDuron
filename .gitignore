@@ -134,3 +134,9 @@ $RECYCLE.BIN/
 
 # End of custom settings
 /.vs/ITSLocation_SergioDuron/v17/.wsuo
+/ITSLocation.API/.vs/ITSLocation.API/DesignTimeBuild/.dtbcache.v2
+*.vsidx
+*.lock
+*.json
+*.v2
+*.bin

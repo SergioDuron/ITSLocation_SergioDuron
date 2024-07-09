@@ -2,7 +2,11 @@ using ITSLocation.Application.Interfaces;
 using ITSLocation.Application.Services;
 using ITSLocation.Domain.RepositoryInterfaces;
 using ITSLocation.Infrastructure.Repository;
+using log4net.Config;
+using log4net.Repository;
+using log4net;
 using Microsoft.OpenApi.Models;
+using System.Reflection;
 
 namespace ITSLocation.API
 {
@@ -11,6 +15,11 @@ namespace ITSLocation.API
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+
+            // Configurar log4net
+            ILoggerRepository logRepository = LogManager.GetRepository(Assembly.GetEntryAssembly());
+            XmlConfigurator.Configure(logRepository, new FileInfo("log4net.config"));
+
 
             // Add services to the container.
             builder.Services.AddScoped<ILocationRepository, LocationRepository>();
@@ -41,13 +50,9 @@ namespace ITSLocation.API
             }
             // Configura el pipeline de solicitudes HTTP.
             app.UseHttpsRedirection();
-
             app.UseAuthorization();
-
             app.MapControllers();
-
             app.Run();
-
         }
 
 
