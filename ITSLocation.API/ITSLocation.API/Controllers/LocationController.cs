@@ -1,4 +1,5 @@
 ﻿using ITSLocation.Application.Interfaces;
+using log4net;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ITSLocation.API.Controllers
@@ -8,22 +9,23 @@ namespace ITSLocation.API.Controllers
     public class LocationController : ControllerBase
     {
         private readonly ILocationService _locationService;
-        private readonly ILogger<LocationController> _logger;
+        private static readonly ILog log = LogManager.GetLogger(typeof(LocationController));
 
-
-        public LocationController(ILocationService locationService, ILogger<LocationController> logger)
+        public LocationController(ILocationService locationService)
         {
             _locationService = locationService;
-            _logger = logger;
         }
 
         [HttpGet("{id}")]
         public IActionResult GetLocationById(int id)
         {
-            _logger.LogInformation("GetLocationById called with id: {Id}", id);
+            log.Info($"Fetching location with id {id}");
             var location = _locationService.GetLocationById(id);
             if (location == null)
+            {
+                log.Warn($"Location with id {id} not found");
                 return NotFound();
+            }
 
             return Ok(location);
         }
@@ -31,7 +33,7 @@ namespace ITSLocation.API.Controllers
         [HttpGet]
         public IActionResult GetAllLocations()
         {
-            _logger.LogInformation("GetAllLocations called");
+            log.Info("Fetching all locations");
             var locations = _locationService.GetAllLocations();
             return Ok(locations);
         }

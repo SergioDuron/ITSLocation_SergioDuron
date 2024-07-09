@@ -1,5 +1,6 @@
 ﻿using ITSLocation.Domain.Entities;
 using ITSLocation.Domain.RepositoryInterfaces;
+using log4net;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +12,7 @@ namespace ITSLocation.Infrastructure.Repository
     public class LocationRepository : ILocationRepository
     {
         private readonly List<Location> _locations;
+        private static readonly ILog log = LogManager.GetLogger(typeof(LocationRepository));
 
         public LocationRepository()
         {
@@ -25,11 +27,13 @@ namespace ITSLocation.Infrastructure.Repository
 
         public Location GetLocationById(int id)
         {
+            log.Info("GetLocationById");
             return _locations.FirstOrDefault(l => l.Id == id);
         }
 
         public IEnumerable<Location> GetAllLocations()
         {
+            log.Info("GetAllLocations");
             return _locations;
         }
     }
