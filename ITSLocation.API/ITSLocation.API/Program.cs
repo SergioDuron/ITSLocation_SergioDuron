@@ -8,11 +8,13 @@ using log4net;
 using Microsoft.OpenApi.Models;
 using System.IO;
 using Microsoft.Extensions.Logging;
+using System.Reflection;
 
 namespace ITSLocation.API
 {
     public class Program
     {
+        private static readonly ILog log = LogManager.GetLogger(typeof(Program));
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
@@ -20,6 +22,9 @@ namespace ITSLocation.API
             // Add services to the container.
             builder.Services.AddScoped<ILocationRepository, LocationRepository>();
             builder.Services.AddScoped<ILocationService, LocationService>();
+
+            // Registrar log4net logger
+            builder.Services.AddSingleton(LogManager.GetLogger(typeof(Program)));
 
             builder.Services.AddControllers();
 
@@ -29,8 +34,12 @@ namespace ITSLocation.API
             });
 
             // Configure log4net
-            var logRepository = LogManager.GetRepository(System.Reflection.Assembly.GetEntryAssembly());
+            var logRepository = LogManager.GetRepository(Assembly.GetEntryAssembly());
             XmlConfigurator.Configure(logRepository, new FileInfo("log4net.config"));
+
+
+            log.Info("log4net configurado correctamente en Program.cs"); // Línea de prueba
+
 
             var app = builder.Build();
 

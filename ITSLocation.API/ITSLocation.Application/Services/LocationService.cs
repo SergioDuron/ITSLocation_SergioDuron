@@ -26,5 +26,6 @@ namespace ITSLocation.Application.Services
             log.Info($"GetAllLocations");
             return _locationRepository.GetAllLocations();
         }
+
     }
 }
